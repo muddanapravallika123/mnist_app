@@ -17,7 +17,7 @@ def preprocess_image(image):
     # Flatten the array to match the model input shape
     image_array = image_array.flatten()
     # Reshape the array to (1, 28, 28) as the model expects a batch dimension
-    image_array = image_array.reshape(1, 28, 28)
+    image_array = image_array.reshape(1, -1)
     return image_array
 
 def predict_digit(image):
